@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <title>Agenda Electrónica</title>
+  </head>
+  <body>
+    <header class="bg-secondary bg-gradient text-white">
+        <nav class="navbar navbar-dark bg-success">
+            <div class="container-fluid">
+              <a class="navbar-brand">Mi Agenda</a>
+              <form class="d-flex">
+                <div id="iniciar-btn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                <button id="cerrar-btn" type="button" class="btn btn-link link-light">Cerrar Sesión</button>
+              </form>
+            </div>
+          </nav>
+    </header>
+    <main class="container-fluid">
+
+        <section id="datos-agenda">
+          <div class="row mt-5">
+            <div class="col-12 col-lg-4 mx-auto">
+              <div class="card">
+                <div class="card-header bg-dark bg-gradient text-white">
+                  <span>Registro en Agenda</span>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="nombre-txt">Nombre</label>
+                    <input type="text" id="nombre-txt" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="correo-txt">Correo</label>
+                    <input type="email" id="correo-txt" class="form-control">
+                  </div>
+                </div>
+                <div class="card-footer d-grid gap-2">
+                  <button type="button" id="registrar-btn" class="btn btn-dark">Registrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-12 col-lg-6 mx-auto class agenda-div">
+
+            </div>
+          </div>
+        </section>
+
+    </main>
+    <div class="d-none ">
+      <table class="table table-hover table-bordered personas-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+      <div class="mensaje-vacio bg-dark text-white text-center p-5">
+         <h4>No hay personas registradas en la agenda</h4>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="js/init.js"></script>
+  </body>
+</html>
